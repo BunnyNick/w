@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nikhil's Ĩnfø</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    video#bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.85) contrast(1.15);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 80px;
+      font-size: 1.4rem;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    a.icon {
+      font-size: 60px;
+      margin: 0 25px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    a.icon:hover {
+      transform: scale(1.4);
+    }
+
+    a.icon.instagram:hover { color: #e4405f; }
+    a.icon.youtube:hover { color: #ff0000; }
+    a.icon.github:hover { color: #333; }
+    a.icon.snapchat:hover { color: #fffc00; }
+    a.icon.email:hover { color: #00bcd4; }
+    a.icon.twitter:hover { color: #1da1f2; }
+
+    .lifting-emoji {
+      font-size: 28px;
+      line-height: 1.2;
+      margin-top: 40px;
+      white-space: pre;
+    }
+
+    .resume-buttons a {
+      display: inline-block;
+      margin-top: 30px;
+      margin-right: 15px;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: white;
+      transition: background 0.3s ease;
+    }
+
+    .resume-buttons .view {
+      background: #00bcd4;
+    }
+
+    .resume-buttons .download {
+      background: #4CAF50;
+    }
+
+    .resume-buttons a:hover {
+      opacity: 0.85;
+    }
+  </style>
+
+  <!-- FontAwesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video
+    id="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="video3.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1> 「 ✦ B_𝐍IKHIL_K  ✦ 」 </h1>
+
+    <img
+      src="nikhil2.jpg"
+      alt="Profile"
+      style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 30px 0;"
+    />
+
+    <div>
+      <a href="https://twitter.com/_bunnynick_" target="_blank" class="icon twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/_bunnynick_/" target="_blank" class="icon instagram" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/BunnyNick" target="_blank" class="icon github" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://snapchat.com/add/n_bunny2006" target="_blank" class="icon snapchat" title="Snapchat">
+        <i class="fab fa-snapchat-ghost"></i>
+      </a>
+      <a href="mailto:bollunickkumar@gmail.com" class="icon email" title="Email Me">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <!-- Resume Buttons -->
+    <div class="resume-buttons">
+      <a href="resume.html" target="_blank" class="view">View Resume</a>
+      <a href="resume.pdf" download class="download">Download Resume</a>
+    </div>
+
+    <div style="margin-top: 60px; max-width: 650px; margin-left: auto; margin-right: auto;">
+      <div
+        style="
+          background: rgba(30, 30, 30, 0.6);
+          border-radius: 30px;
+          padding: 30px 35px;
+          border: 2px solid #a0cfc4;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+          color: white;
+          font-style: italic;
+          font-size: 1.2rem;
+        "
+      >
+        <p>
+          ~~ ¥ÖÚ'RÈ ÄLRÄÈÐ¥ ~~
+        </p>
+        <p>
+          🧿 UnDer My Genjutsu 👁‍🗨
+        </p>
+      </div>
+
+      <pre class="lifting-emoji">
+¯\_(ツ)_/¯
+ /|\
+ / \
+      </pre>
+    </div>
+  </div>
+
+  <!-- Fix Autoplay with JavaScript -->
+  <script>
+    const video = document.getElementById("bg-video");
+
+    window.addEventListener("load", () => {
+      video.muted = true;
+      video.play().catch((err) => {
+        console.warn("Autoplay failed, retrying...", err);
+        video.muted = true;
+        video.play();
+      });
+    });
+  </script>
+
+</body>
+</html>
